@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="js/index-css.css"/>
+		<script type="text/javascript">
+			//创建函数进行图片的联动和样式设置
+			//鼠标移入时间触发onmouseover
+			function Inimg(img,sc){
+				//sc为传递的固定参数
+				//设置图片的样式
+				//img.style.border="solid 1px red";
+				img.style.transform="rotate(0deg) scale(1.5)";/*设置旋转角度和缩放大小*/
+                img.style.transition="1.5s";/*设置响应时间*/
+                img.style.zIndex=2;
+				//获取大图片元素ID
+				var big=document.getElementById("big");
+				//更改大图路径
+					big.src="img/"+sc;	
+			}
+			//鼠标移出时触发onmouseout
+			function outimg(img){
+				//设置图片样式
+				img.style.border="";
+				img.style.transform="rotate(0deg) scale(1)";/*设置旋转角度和缩放大小*/
+                img.style.transition="1s";/*设置响应时间*/
+                img.style.zIndex=1;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="logo"></div>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="main/表单验证.html">注册</a></li>
+				<li><a href="main/表单验证.html">登陆</a></li>
+				<li><a href="#">论坛</a></li>
+				<li><a href="电影首页.html">视频</a></li>
+			</ul>
+		</div>
+		<div id="main">
+			<div id="navigation" style="float: left;">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="main/表格操作.html">视频定制</a></li>
+            <li><a href="电影首页.html">视频</a></li>
+             </ul>	
+		    </div>
+			<div class="content">				
+				<div   style="" >
+				     <img src="img/big-01.jpg" id="big"/>
+			    </div>
+				<div id="tu">
+			      <img src="img/small-01.jpg" onmouseover="Inimg(this,'big-01.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-02.jpg" onmouseover="Inimg(this,'big-02.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-03.jpg" onmouseover="Inimg(this,'big-03.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-04.jpg" onmouseover="Inimg(this,'big-04.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-01.jpg" onmouseover="Inimg(this,'big-01.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-02.jpg" onmouseover="Inimg(this,'big-02.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-03.jpg" onmouseover="Inimg(this,'big-03.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-04.jpg" onmouseover="Inimg(this,'big-04.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-01.jpg" onmouseover="Inimg(this,'big-01.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-02.jpg" onmouseover="Inimg(this,'big-02.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-03.jpg" onmouseover="Inimg(this,'big-03.jpg')" onmouseout="outimg(this);"/>
+			      <img src="img/small-04.jpg" onmouseover="Inimg(this,'big-04.jpg')" onmouseout="outimg(this);"/>
+			
+		        </div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="footer">
+			站点信息
+		</div>
+	</body>
+</html>
